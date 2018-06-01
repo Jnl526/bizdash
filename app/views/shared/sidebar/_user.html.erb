@@ -1,0 +1,33 @@
+<div class="user">
+  <div class="photo">
+      
+  </div>
+  <div class="info">
+    <a data-toggle="collapse" href="#collapseExample" class="collapsed" aria-expanded="false">
+      <span>
+          Hi, <%= current_user.first_name %>
+          <b <i class="fa fa-caret-down"></i></b>
+      </span>
+    </a>
+    <div class="clearfix"></div>
+    <div class="collapse" id="collapseExample" style="">
+      <ul class="nav">
+        <li>
+          <a href="#">
+              <span class="sidebar-mini-icon">MP</span>
+              <span class="sidebar-normal">My Profile</span>
+          </a>
+        </li>
+        <li>
+          <%= link_to("Edit Profile", edit_user_registration_path(current_user), :class => 'action view text-white') %>
+        </li>
+        <li>
+          <a href="#">
+              <span class="sidebar-mini-icon">S</span>
+              <span class="sidebar-normal">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

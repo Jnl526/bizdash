@@ -1,0 +1,10 @@
+<div class="logo">
+  <a href="/" class="simple-text logo-mini"><%= current_user.company %></a>
+  <a href="/" class="simple-text logo-normal"><%= image_tag (current_user.company_logo), :class => ("thumb_sm") %></a>
+  <div class="navbar-minimize">
+    <button id="minimizeSidebar" class="btn btn-simple btn-icon btn-neutral btn-round">
+        <i class="now-ui-icons text_align-center visible-on-sidebar-regular"></i>
+        <i class="now-ui-icons design_bullet-list-67 visible-on-sidebar-mini"></i>
+    </button>
+  </div>
+</div>
