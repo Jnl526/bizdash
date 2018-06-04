@@ -1,0 +1,26 @@
+$white-color: #FFFFFF !default;
+$btn-round-radius: 30px !default;
+
+a{
+  color: #2481ce;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #404359;
+  border-color: #404359;
+  &:hover{
+    background-color: #2481ce;
+    border-color: #2481ce;
+  }
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color:  #404359 !important;
+  background-image: none !important;
+  color:#fff !important;
+}
+
+.bg-primary {
+  background-color: #2f3242 !important;
+}

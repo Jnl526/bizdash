@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;GAiBG",
+    "sources": [
+        "../../app/assets/stylesheets/application.scss"
+    ],
+    "names": [],
+    "file": "application.css"
+}

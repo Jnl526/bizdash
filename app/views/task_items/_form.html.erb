@@ -1,0 +1,9 @@
+<%= bootstrap_form_for([@task_list, @task_list.task_items.build]) do |form| %>
+  <div class="field">
+    <%= form.text_field :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
