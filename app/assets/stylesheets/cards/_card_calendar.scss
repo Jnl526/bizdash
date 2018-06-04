@@ -1,0 +1,61 @@
+#card-calendar{
+  .calendar-heading{
+    text-align: center;
+  }
+  .table,
+  td,th{
+    border: none;
+  }
+  thead{
+    th{
+      border: none;
+      text-align: center;
+    }
+  }
+  .next-month,
+  .prev-month {
+    background: none;
+    opacity: 0.4;
+  }
+  
+  .day {
+    height: 50px;
+      vertical-align: middle;
+      padding: 0;
+      text-align: center;
+  }
+  .today {
+    background: none;
+    
+    span{
+      background: #2196f3;
+      border-radius: 40px;
+      padding: 10px;
+    }
+    
+    &.has-events{
+      span{
+        background: #4caf50;
+        cursor: pointer;
+        border-radius: 40px;
+        padding: 10px;
+      }
+      
+    }
+  }
+  .has-events{
+    span{
+    background: #4caf50;
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 10px;
+    &:hover{
+      background: rgba(76, 175, 80, 0.34);
+    }
+  }
+  }
+  tbody tr:nth-of-type(odd) {
+    background-color: transparent;
+  }
+  
+}

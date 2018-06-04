@@ -5,6 +5,7 @@ class DashboardController < ApplicationController
   def index
     @users = User.all
     @schedules = Schedule.all
+    @task_lists = TaskList.all
     end
     def show
 
