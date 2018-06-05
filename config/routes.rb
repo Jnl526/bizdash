@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   root "dashboard#index"
-  resources :meetings
+  resources :schedules
   resources :users
   resources :clients
   resources :invoices
@@ -15,5 +15,5 @@ Rails.application.routes.draw do
       end
     end
   end
-  
+
 end
