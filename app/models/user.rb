@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :projects
   has_many :invoices
   has_many :events
-  has_many :tasks
+  has_many :items
   has_many :educations
 end

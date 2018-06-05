@@ -1,0 +1,12 @@
+<%= bootstrap_form_for @item do |form| %>
+  <div class="field">
+    <%= form.text_field :title, hide_label: true, placeholder: "Add New Task" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :description, hide_label: true, placeholder: "Add description" %>
+  </div>
+
+  <div class="actions">
+     <%= form.submit class:"btn-primary" %>
+  </div>
+<% end %>

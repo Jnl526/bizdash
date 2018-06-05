@@ -76,3 +76,5 @@ gem "bootstrap_form",
 gem "faker"
 
 gem "simple_calendar", "~> 2.0"
+
+gem 'responders', '~> 2.0'

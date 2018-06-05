@@ -1,0 +1,44 @@
+<div class="col-md-12">
+		<% @items.each do |item| %>
+			<div class="index-wrapper">
+				<% if item.completed? %>
+					<div class="row item task-item">
+						<div class="col-md-8">
+							<h2 style="opacity: 0.5;" class="item-title"><%= link_to item.title, item %></h2>
+							<p style="opacity: 0.5;" class="item-sub-title item-desc"><%= item.description %></p>
+							<p style="opacity: 0.5;" class="time-created-at item-sub-title">Completed <%= time_ago_in_words(item.completed_at) %> ago</p>
+						</div>
+						<div class="col-md-2 complete">
+							<p><%= link_to complete_item_path(item), method: :patch do %></p>
+								<i class="fa fa-check-circle fa-lg"></i>
+							<% end %>
+						</div>
+						<div class="col-md-2 trash">
+							<p><%= link_to item, method: :delete, data: { confirm: "Are you sure?" } do %></p>
+								<i class="fa fa-trash-o fa-lg"></i>
+							<% end %>
+						</div>	
+					</div>
+				<% else %>	
+					<div class="row item">
+						<div class="col-md-8">
+							<h2 class="item-title"><%= item.title %></h2>
+							<p class="item-sub-title item-desc"><%= item.description %></p>
+							<p style="opacity: 0.5;" class="time-created-at item-sub-title">Created <%= time_ago_in_words(item.created_at) %> ago</p>
+						</div>
+						<div class="col-md-2">
+							<p><%= link_to complete_item_path(item), method: :patch do %></p>
+								<i class="fa fa-circle-o fa-lg"></i>
+							<% end %>
+						</div>
+						<div class="col-md-2 trash">
+							<p><%= link_to item, method: :delete, data: { confirm: "Are you sure?" } do %></p>
+								<i class="fa fa-trash-o fa-lg"></i>
+							<% end %>
+						</div>
+					</div>
+				<% end %>
+			</div>
+<% end %>
+</div>
+<%= link_to "New Item", new_item_path %>
