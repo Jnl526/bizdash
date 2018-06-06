@@ -65,6 +65,8 @@ gem 'devise'
 
 gem 'bootstrap', '~> 4.1.1'
 
+gem 'bootstrap-popover-rails'
+
 gem 'jquery-rails'
 
 gem 'font-awesome-rails'
@@ -78,3 +80,9 @@ gem "faker"
 gem "simple_calendar", "~> 2.0"
 
 gem 'responders', '~> 2.0'
+
+gem 'carrierwave'
+
+gem 'mini_magick'
+
+gem 'fog'

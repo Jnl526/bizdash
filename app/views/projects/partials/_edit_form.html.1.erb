@@ -17,10 +17,7 @@
   </div>
   <div class="col-md-4 ">
   <div class="field">
-    
-    <%= form.collection_select :client_id, @clients, :id, :fullname, include_blank: "Choose Client" %>
-
-
+    <%= form.select :client_id, options_for_select(@clients.map{ |s| [s.fullname, s.id] }) %>
   </div>
   <div class="field">
     <%= form.date_field :deadline %>

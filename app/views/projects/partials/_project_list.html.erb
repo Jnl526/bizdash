@@ -32,9 +32,9 @@
         <tr id="project-<%= project.id %>" >
       <td> <%= project.name%></h1>
       <td> <%= project.client.first_name %> <%= project.client.last_name %></td>
-      <td><p class="circle"><span > <%= project.hours %></span></p></td>
+      <td><p class="circle"><span> <%= project.hours %></span></p></td>
       <td >
-      <%= link_to complete_project_path(project), method: :patch do %><i class="fa fa-circle-o fa-lg"></i>
+      <%= link_to complete_project_path(project), method: :patch do %><span class="pulse"></span>
     <span class="pl-2 active">Active</span>
         <% end %> 
       </td>
