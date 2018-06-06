@@ -20,4 +20,15 @@
   .card-category{
     font-size: 16px;
   }
+  .table,
+  td,th{
+    border: none;
+    vertical-align: middle;
+  }
+  thead{
+    th{
+      border: none;
+      
+    }
+  }
 }
