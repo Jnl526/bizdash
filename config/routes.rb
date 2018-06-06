@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :task_lists
+  
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   root "dashboard#index"
@@ -7,13 +7,16 @@ Rails.application.routes.draw do
   resources :users
   resources :clients
   resources :invoices
-  resources :projects
-  resources :task_lists do 
-    resources :task_items do
-      member do
-        patch :complete
-      end
+  resources :projects do
+  member do
+    patch :complete
+  end
+  end
+  resources :items do
+    member do
+      patch :complete
     end
   end
+  
 
 end

@@ -5,11 +5,15 @@ class DashboardController < ApplicationController
   def index
     @users = User.all
     @schedules = Schedule.all
-    @task_lists = TaskList.all
+    @items = Item.all
+    
     end
     def show
 
     end
 
-    
+    def complete
+      @task_item.update_attribute(:completed_at, Time.now)
+      redirect_to @task_list, notice: "Task completed"
+    end
 end

@@ -1,0 +1,33 @@
+<%= bootstrap_form_for @client do |form| %>
+  <div class="field">
+    <%= form.text_field :first_name, hide_label: true, placeholder: "First Name" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :last_name, hide_label: true, placeholder: "Last Name" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :address, hide_label: true, placeholder: "Address" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :city, hide_label: true, placeholder: "City" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :state, hide_label: true, placeholder: "State" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :zipcode, hide_label: true, placeholder: "Zipcode" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :company, hide_label: true, placeholder: "Company" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :email, hide_label: true, placeholder: "Email" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :phone, hide_label: true, placeholder: "Phone" %>
+  </div>
+
+  <div class="actions">
+     <%= form.submit class:"btn-primary" %>
+  </div>
+<% end %>

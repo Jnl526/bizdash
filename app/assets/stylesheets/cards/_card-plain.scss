@@ -1,7 +1,7 @@
 .card-plain{
   background: #2f3242;
   box-shadow: none;
-  border-radius: none;
+  border-radius: 0;
   .card-header,
   .card-footer{
     margin-left: 0;
@@ -13,5 +13,22 @@
   &:not(.card-subcategories).card-body{
       padding-left: 0;
       padding-right: 0;
+  }
+  .card-title{
+    text-transform: capitalize;
+  }
+  .card-category{
+    font-size: 16px;
+  }
+  .table,
+  td,th{
+    border: none;
+    vertical-align: middle;
+  }
+  thead{
+    th{
+      border: none;
+      
+    }
   }
 }
