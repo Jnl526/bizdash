@@ -17,7 +17,13 @@ p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
 }
-
+ul{
+  -webkit-padding-start: 10px;
+  li {
+    list-style: none;
+  }
+}
+ 
 pre {
   background-color: #eee;
   padding: 10px;
@@ -67,12 +73,11 @@ div {
     color: #fff;
   }
 
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
 }
 
+form{
+  width: 100%;
+}
 label {
   display: block;
     font-size: 14px;
@@ -81,12 +86,7 @@ label {
 }
 
 .main-panel {
-  position: relative;
-  float: right;
-  width: calc(100% - 260px);
-  background-color: #2b2d3c;
-  transition: all .5s cubic-bezier(.685,.0473,.346,1);
-  height: 100vh;
+  
     .panel-header-lg {
       height: 380px;
     }
@@ -119,4 +119,14 @@ label {
 
 .back{
   font-family: Lato,FontAwesome, sans-serif;
+}
+@media (min-width: 768px){
+  .main-panel {
+    position: relative;
+    float: right;
+    width: calc(100% - 260px);
+    background-color: #2b2d3c;
+    transition: all .5s cubic-bezier(.685,.0473,.346,1);
+    height: 100vh;
+  }
 }

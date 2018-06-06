@@ -1,5 +1,11 @@
-<h1>New Schedule</h1>
+<div class="row m-0">
+	<div class="col-md-8">
+  <h3>New Schedule</h3>
+    <%= render 'form', schedule: @schedule %>
+		<%= link_to schedules_path, :class => "fa fa-arrow-left" do %>
+			<span class="back">	Back</span>
+		<% end %>
+	</div>
+</div>
 
-<%= render 'form', schedule: @schedule %>
 
-<%= link_to 'Back', schedules_path %>
