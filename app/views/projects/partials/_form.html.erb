@@ -18,7 +18,7 @@
   <div class="col-md-4 ">
   <div class="field">
     
-    <%= form.collection_select :client_id, @clients, :id, :fullname, include_blank: "Choose Client" %>
+    <%= form.hidden_field :client_id, value: 1 %>
 
 
   </div>
