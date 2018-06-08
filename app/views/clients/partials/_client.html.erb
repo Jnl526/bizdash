@@ -1,0 +1,49 @@
+<div class="col-md-8 ">
+    <em>Client Name</em>
+    <h2><%= @client.fullname %></h2>
+    <div class="pt-4">
+      <em>Company</em>
+      <p  class="pt-2"><%= @client.company %></p>
+    </div>
+    <em>Address</em>
+    <p><%= @client.address %> <br><%= @client.city %> <%= @client.state %> <%= @client.zipcode %></p>
+    <em>Contact Info</em> 
+    <div class="row m-0">
+      <div class="col-md-4 p-0">
+        <p>Email: <%= @client.email %></p>
+      </div>
+      <div class="col-md-4 p-0">
+        <p>Phone: <%= @client.phone %></p>
+      </div>
+    </div>
+    <div class="row links">
+      <div class="col-md-4 ">
+        <p>
+        <span><%= link_to edit_client_path(@client), class: "fa fa-pencil-square-o" do %>
+        <span class="back">Edit</span>
+        <% end %></span>
+        <span class="trash"><%= link_to client_path(@client), method: :delete, class: "fa fa-trash-o", data: { confirm: "Are you sure?" } do %>
+        <span class="back">Delete</span>
+        <% end %></span>
+        </p>
+      </div>
+    </div>
+</div>
+
+<div class="col-md-4 ">
+<em>Projects</em>
+  <% @client.projects.each do |project| %>
+      <ul>
+      <li><% if project.completed_at != nil %><i class="fa fa-check-circle"></i>
+      <span class="complete">Completed</span>
+      <% else %>
+      <span class="pulse"></span>
+      <% end %><%= link_to("#{project.name}", project_path(project)) %> 
+      
+  </li>
+      </ul>
+  <% end %>
+    
+    </div>
+
+    

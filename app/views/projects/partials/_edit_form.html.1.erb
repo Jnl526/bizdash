@@ -1,0 +1,28 @@
+
+<%= bootstrap_form_for @project do |form| %>
+<div class="row m-0">
+  <div class="col-md-8 ">
+    <div class="field">
+      <%= form.text_field :name, label: "Project Name",  class:"title"  %>
+    </div>
+    <div class="field">
+      <%= form.text_field :hours  %>
+    </div>
+    <div class="field">
+      <%= form.text_area :description %>
+    </div>
+    <div class="actions">
+     <%= form.submit class:"btn-primary" %>
+  </div>
+  </div>
+  <div class="col-md-4 ">
+  <div class="field">
+    <%= form.select :client_id, options_for_select(@clients.map{ |s| [s.fullname, s.id] }) %>
+  </div>
+  <div class="field">
+    <%= form.date_field :deadline %>
+  </div>
+  </div>
+  
+  </div>
+<% end %>

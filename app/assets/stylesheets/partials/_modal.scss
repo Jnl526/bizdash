@@ -1,0 +1,29 @@
+.modal-content{
+  background-color: #2f3242;
+  .modal-header{
+    background-color: #3a3e52;
+    border-bottom: 0;
+    padding-bottom: 15px;
+    .close{
+      color: #fff;
+    }
+  }
+  .form-control {
+    color: #fff;
+    border: none;
+    background: #2b2d3c;
+    border-radius: 0;
+    padding: 1em .8em;
+}
+}
+
+.bs-popover-right{
+  width: 400px;
+  text-transform: capitalize;
+    .popover-header,
+    .popover-body{
+      color: #fff;
+      background: #2f3242;
+    }
+    
+}

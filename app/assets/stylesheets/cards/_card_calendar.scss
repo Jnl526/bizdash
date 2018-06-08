@@ -12,11 +12,7 @@
       text-align: center;
     }
   }
-  .next-month,
-  .prev-month {
-    background: none;
-    opacity: 0.4;
-  }
+  
   
   .day {
     height: 50px;
@@ -25,7 +21,7 @@
       text-align: center;
   }
   .today {
-    background: none;
+    background: none !important;
     
     span{
       background: #2196f3;
@@ -49,6 +45,7 @@
     cursor: pointer;
     border-radius: 40px;
     padding: 10px;
+    color: #fff;
     &:hover{
       background: rgba(76, 175, 80, 0.34);
     }
@@ -58,4 +55,21 @@
     background-color: transparent;
   }
   
+}
+.simple-calendar{
+.next-month,
+  .prev-month {
+    background: none !important;
+    opacity: 0.4;
+  }
+  .today {
+    background: #2196f3 !important;
+}
+.has-events{
+ color: #4caf50;
+ p {
+  margin: 0;
+}
+}
+
 }

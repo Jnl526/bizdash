@@ -15,6 +15,7 @@ class SchedulesController < ApplicationController
   # GET /schedules/new
   def new
     @schedule = Schedule.new
+    
   end
 
   # GET /schedules/1/edit
@@ -61,6 +62,8 @@ class SchedulesController < ApplicationController
     end
   end
 
+  
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_schedule

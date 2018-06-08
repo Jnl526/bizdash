@@ -1,0 +1,39 @@
+<div class="content">
+        <div class="row m-0">
+            <div class="col-md-12">
+            <div class="card card-plain card-list">                
+                <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <th>ID</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Company</th>
+                      <th>Address</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Project ID</th>
+                    </thead>
+                    <tbody>
+                    <% @clients.each do |client|%>   
+                        <tr id="client-<%= client.id %>" class="highlight">
+          <td> <%= client.id%></h1>
+         <td> <%= client.first_name %></h1>
+         <td>  <%= client.last_name %></td>
+          <td>  <%= client.company %></td>
+          <td>  <%= client.address %> <br><%= client.city %> <%= client.state %> <%= client.zipcode %></td>
+          <td>  <%= client.email %></td>
+          <td>  <%= client.phone %></td>
+          <td>  <%= client.project_id %></td>
+          <td>  <%= link_to("Show", client_path(client), :class => 'action view') %></td>
+          
+          
+          </tr>
+          <% end %>
+                    </tbody>
+                    </table>
+            </div>       
+            </div>             
+        </div>  <!-- row --> 
+    </div>  <!-- content -->  

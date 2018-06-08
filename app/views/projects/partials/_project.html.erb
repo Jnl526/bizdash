@@ -1,0 +1,36 @@
+<div class="col-md-8 ">
+  <div class="row">
+   <div class="col-md-8" >
+    <em>Project Name</em>
+    <h2><%= @project.name %></h2>
+    </div>
+    <div class="col-md-4" >
+    <p class="circle"><span><%= @project.hours %></span></p>
+    </div>
+  </div>
+  <div class="pt-4"><em>Project Description</em><p  class="pt-2"><%= @project.description %></p></div>
+  
+</div>
+<div class="col-md-4 ">
+	<p>Client: <%= @project.client.first_name %> <%= @project.client.last_name %></p>
+	<p>Project Due: <%= @project.deadline.strftime(" %D")%></p>
+  <p>Project Status: 
+  <% if @project.completed_at != nil %>
+  <span class="complete">Completed</span><%= @project.completed_at.strftime(" %D")%> 
+  <% else %>
+  <span class="active">Active</span>
+  <% end %>
+  </p>
+  <div class="row links">
+    <div class="col-md-4 ">
+      <p><%= link_to edit_project_path(@project), class: "fa fa-pencil-square-o" do %>
+      <span class="back">Edit</span>
+      <% end %></p>
+    </div>
+     <div class="col-md-4 ">
+      <p class="trash"><%= link_to project_path(@project), method: :delete, class: "fa fa-trash-o", data: { confirm: "Are you sure?" } do %>
+      <span class="back">Delete</span>
+      <% end %></p>
+      </div>
+    </div>
+</div>

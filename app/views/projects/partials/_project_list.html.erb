@@ -1,0 +1,52 @@
+<div class="col-md-12">
+      <div class="card card-plain card-list">                
+        <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <th>Project Title</th>
+              <th>Client</th>
+              <th>Hours</th>
+              <th>Status</th>
+              <th>Deadline</th>
+            </thead>
+            <tbody>
+            <% @projects.each do |project|%>   
+            <% if project.completed? %>
+              <tr id="project-<%= project.id %>" >
+      <td> <%= project.name%></h1>
+      <td> <%= project.client.first_name %> <%= project.client.last_name %></h1>
+      <td> <p class="circle"><span > <%= project.hours %></span></p></td>
+      <td><p style="opacity: 0.5;" class="time-created-at item-sub-title">Completed <%= time_ago_in_words(project.completed_at) %> ago</p></td>
+      <td class="complete">
+      <%= link_to complete_project_path(project), method: :patch do %><i class="fa fa-check-circle fa-lg"></i>
+    <span class="pl-2">Completed</span>
+        <% end %> 
+      </td>
+      
+      <td><%= project.deadline.strftime(" %D")%></td>
+      <td>  <%= link_to("Show", project_path(project), :class => 'action view') %></td>
+
+      </tr>
+      	<% else %>
+        <tr id="project-<%= project.id %>" >
+      <td> <%= project.name%></h1>
+      <td> <%= project.client.first_name %> <%= project.client.last_name %></td>
+      <td><p class="circle"><span> <%= project.hours %></span></p></td>
+      <td >
+      <%= link_to complete_project_path(project), method: :patch do %><span class="pulse"></span>
+    <span class="pl-2 active">Active</span>
+        <% end %> 
+      </td>
+      
+      <td><%= project.deadline.strftime(" %D")%></td>
+      <td>  <%= link_to("Show", project_path(project), :class => 'action view') %></td>
+
+      </tr>
+      <% end %>
+      <% end %>
+                </tbody>
+                </table>
+        </div>       
+        </div>             
+    

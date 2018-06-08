@@ -4,5 +4,16 @@
   .form-control{
     border-radius: 0.3rem;
     background: transparent;
+    color: #fff;
+  }
+  .form-control {
+    color: #fff;
+    border: none;
+    background: #2f3242;
+    border-radius: 0;
+    padding: 1em .8em;
+}
+  .title{
+    font-size: 1.6rem;
   }
 }

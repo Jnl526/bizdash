@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   resources :users
   resources :clients
   resources :invoices
-  resources :projects
+  resources :projects do
+  member do
+    patch :complete
+  end
+  end
   resources :items do
     member do
       patch :complete

@@ -3,6 +3,9 @@ $btn-round-radius: 30px !default;
 
 a{
   color: #2481ce;
+  &:focus {
+    outline: none;
+}
 }
 
 .btn-primary {
@@ -24,4 +27,30 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 .bg-primary {
   background-color: #2f3242 !important;
+}
+.circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right bottom, #2e5b8e 28%, #4caf50 100%);
+  text-align: center;
+  margin: 0;
+  span{
+    background: #2b2d3d;
+    border-radius: 50%;
+    width: 47px;
+    height: 46.5px;
+    padding: 13px;
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    transform: translate(2px, 2px);
+    margin: auto;
+  }
+}
+ em{
+  font-size: 14px;
+  color: #757da4;
 }

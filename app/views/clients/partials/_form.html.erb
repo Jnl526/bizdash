@@ -1,0 +1,64 @@
+<div class="row m-0">
+<%= bootstrap_form_for @client do |form| %>
+  <div class="row m-0">
+    <div class="col-md-4 ">
+      <div class="field">
+        <%= form.text_field :first_name, label: "First Name" %>
+      </div>
+    </div>
+    <div class="col-md-4 ">
+      <div class="field">
+        <%= form.text_field :last_name, label: "Last Name" %>
+      </div>
+    </div>
+    <div class="col-md-4 ">
+      <div class="field">
+      <%= form.text_field :company, label: "Company" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row m-0">
+    <div class="col-md-8 ">
+      <div class="field">
+        <%= form.text_field :address, label: "Address" %>
+      </div>
+    </div>
+  </div>
+  <div class="row m-0">
+    <div class="col-md-3 ">
+      <div class="field">
+        <%= form.text_field :city, label: "City" %>
+      </div>
+    </div>
+    <div class="col-md-3 ">
+      <div class="field">
+        <%= form.text_field :state, label: "State" %>
+      </div>
+    </div>
+    <div class="col-md-3 ">
+      <div class="field">
+        <%= form.text_field :zipcode, label: "Zipcode" %>
+      </div>
+    </div>
+  </div>
+  <div class="row m-0">
+    <div class="col-md-4 ">
+      <div class="field">
+        <%= form.text_field :email, label: "Email" %>
+      </div>
+    </div>
+    <div class="col-md-4 ">
+      <div class="field">
+        <%= form.text_field :phone, label: "Phone" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row m-0">
+    <div class="actions col-md-6">
+      <%= form.submit class:"btn-primary" %>
+    </div>
+  </div>
+<% end %>
+ </div>
