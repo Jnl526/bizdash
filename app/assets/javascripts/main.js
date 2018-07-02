@@ -5,7 +5,3 @@ $(document).on('click', '#card-calendar .day', function() {
 });
 
 
-$(function () {
-  $('[data-toggle="popover"]').popover()
-  .addClass('schedule-popover');
-})
